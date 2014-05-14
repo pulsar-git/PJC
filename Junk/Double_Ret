@@ -1,0 +1,12 @@
+;#*REG_PROTECT
+;#*AUTHOR Dunno
+CALL @F
+DB 0E8h
+@@:
+CALL @F	
+INT 20h
+@@:
+ADD DWORD PTR [ESP], 0Bh
+ADD DWORD PTR [ESP+4], 13h
+DB 0C3h 
+DB 0E9h

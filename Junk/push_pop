@@ -1,0 +1,11 @@
+;#*AUTHOR Kaine
+
+;#*VAR %a% reg32
+;#*VAR %b% 4 8 16
+;#*VAR %c% xor add sub rol ror
+
+sub esp,%b% 
+lea esp,[esp+%b%-4]
+mov dword ptr [esp],%a% 
+%c% %a%,%b%
+pop %a%

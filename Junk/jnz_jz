@@ -1,0 +1,6 @@
+;#*AUTHOR Unkown
+
+jnz @F
+jz @F
+db 0E9h
+@@:

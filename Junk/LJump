@@ -1,0 +1,15 @@
+;#*REG_PROTECT
+;#*AUTHOR Pulsar
+	call	$+8
+	db	0CDh,020h,0EBh
+	jmp	$+5
+	db	0CDh,020h,0EAh
+	jmp	$+5
+	db	0EBh
+	jmp	@F
+	jmp	$+5
+	db	0CDh,020h,0C7h
+	add	dword ptr [esp],11
+	DB 0C3h
+	db 0E9h,0FFh
+	@@:

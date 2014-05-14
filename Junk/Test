@@ -1,0 +1,15 @@
+;#*REG_PROTECT
+;#*NAME Test_Macro
+;#*AUTHOR Pulsar
+;WARNING Comments have a ; at FIRST position on the line, no space allowed first
+
+;Comments or empty lines are jumped over ^^
+;#*VAR %a% reg32
+;#*VAR %d% 0E9h 0E8h 0E7h
+
+push %a%
+add %a%,%d%
+xor %a%,%d%
+pop %a% 
+  
+ 

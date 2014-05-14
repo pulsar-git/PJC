@@ -1,0 +1,14 @@
+;#*AUTHOR Dulek_Beatrix
+;#*VAR %a% reg32
+
+push %a%
+push $+3Ah
+pop %a%
+; *************** Obfuscations *********************************
+WORD 02EBh, 1065h, 02EBh, 20CDh, 02EBh,1065h, 02EBh, 20CDh
+WORD 02EBh, 1065h, 02EBh, 20CDh, 02EBh,1065h, 02EBh, 20CDh
+WORD 02EBh, 1065h, 02EBh, 20CDh, 02EBh,1065h, 02EBh, 20CDh
+; ******************* CCA + Obfuscations ************************
+jmp %a% ; <------Empèche OllyDbg de poser une étiquette en eax
+WORD 42EBh ; <------Piège qui leurre OllyDbg
+pop %a%

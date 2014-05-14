@@ -1,0 +1,10 @@
+;#*AUTHOR Pulsar
+;#*VAR %a% Kaine Eloo Kharneth Beatrix2004 Neitsa Yolejedi +Spath Stone ElicZ
+
+push ecx
+xor ecx,ecx
+jcxz @F
+db "Greetz goes to " 
+db "%a%",0
+@@:
+pop ecx

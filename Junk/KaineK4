@@ -1,0 +1,22 @@
+;#*REG_PROTECT
+;#*AUTHOR Kaine?
+
+PUSHA	
+PUSHF
+XOR EAX, EAX
+CALL @F
+@@:
+		ADD AL, 0Fh
+		JMP @F
+		POPF
+		POPA
+@@:	
+		POP EBX
+		MOV BYTE PTR [EBX], 0EBh
+		JE $+0Dh
+		PUSH EBX
+	DB 0C3h
+	DW 05C7h
+	MOV BYTE PTR [EBX], 4
+POPF
+POPA

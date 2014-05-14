@@ -1,0 +1,9 @@
+;#*AUTHOR Kaine
+;#*VAR %a% reg32
+;#*VAR %b% 4 8 16
+;#*VAR %c% xor add sub rol ror
+
+push %a%
+%c% %a% , %b% 
+mov %a% ,[esp]
+add esp,4
